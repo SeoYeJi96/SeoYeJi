@@ -4,6 +4,21 @@
 
 # -SAS
 
+- Sweat 데이터에 대한 일변량 평균 검정 수행
+- 데이터 불러오기
+
+```sass
+proc import datafile = "C:\Users\samsung\Desktop\sweat.csv" dbms
+=csv
+    replace out = sweat; 
+    getnames = yes; 
+run; 
+
+proc print data = sweat; 
+run;
+```
+
+- means procedure를 이용하여 데이터의 평균벡터 확인
 1. **일변량 평균 검정**
 - Sweat 데이터에 대한 일변량 평균 검정 수행
 - 데이터 불러오기
